@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">UISample2</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string-array name="my_name">
+        <item>Aliza</item>
+        <item>Levinger</item>
+    </string-array>
+    <string-array name="courses">
+        <item>CS 608</item>
+        <item>CS 610</item>
+        <item>CS 623</item>
+        <item>CS 639</item>
+        <item>CS 624</item>
+    </string-array>
+
+</resources>
