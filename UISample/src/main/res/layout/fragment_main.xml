@@ -1,0 +1,116 @@
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal"
+    >
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingLeft="@dimen/left_padding"
+        android:paddingRight="@dimen/right_padding">
+        <ImageView
+            android:id="@+id/aliza_view"
+            android:layout_width="200dp"
+            android:layout_height="match_parent"
+            android:paddingLeft="@dimen/left_padding"
+            android:paddingRight="@dimen/right_padding"
+            android:gravity="start"
+            android:src="@drawable/aliza" />
+    </RelativeLayout>
+
+
+
+    <RelativeLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:paddingLeft="@dimen/left_padding"
+        android:paddingRight="@dimen/right_padding"
+        android:layout_weight="1">
+
+        <TextView
+            android:id="@+id/first_name_text_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="@string/first_name"
+            android:textSize="@dimen/text_size"/>
+
+
+        <TextView
+            android:id="@+id/last_name_text_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_below="@id/first_name_text_view"
+            android:text="@string/last_name"
+            android:textSize="@dimen/text_size"/>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:layout_weight="1">
+
+        <TextView
+            android:id="@+id/course1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:gravity="center"
+            android:textSize="@dimen/text_size"
+            android:text="@string/CS608"/>
+
+        <TextView
+            android:id="@+id/course2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:gravity="center"
+            android:textSize="@dimen/text_size"
+            android:text="@string/CS610"
+            android:layout_below="@id/course1"
+            />
+
+        <TextView
+            android:id="@+id/course3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:gravity="center"
+            android:textSize="@dimen/text_size"
+            android:text="@string/CS623"
+            android:layout_below="@id/course2"
+            />
+        <TextView
+            android:id="@+id/course4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:gravity="center"
+            android:textSize="@dimen/text_size"
+            android:text="@string/CS639"
+            android:layout_below="@id/course3"
+            />
+
+        <TextView
+            android:id="@+id/course5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:gravity="center"
+            android:textSize="@dimen/text_size"
+            android:text="@string/CS624"
+            android:layout_below="@id/course4"
+            />
+
+
+    </RelativeLayout>
+
+
+</LinearLayout>
+
