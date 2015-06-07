@@ -1,5 +1,7 @@
 <resources>
     <string name="app_name">ImageViewer</string>
-    <string name="hello_world">Hello world!</string>
-    <string name="action_settings">Settings</string>
+    <string name="pic_title">Aliza Levinger</string>
+    <string name="prev_Button">Prev</string>
+    <string name="next_Button">Next</string>
+
 </resources>

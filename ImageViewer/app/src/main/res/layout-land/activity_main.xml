@@ -11,14 +11,14 @@
     android:orientation="horizontal"
     android:background="#333333">
 
-<Button
-    android:id="@+id/Prev"
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    android:layout_alignParentTop="true"
-    android:layout_alignParentLeft="true"
-    android:text="@string/prev_Button"
-    android:textColor="#FFFFFF"/>
+    <Button
+        android:id="@+id/Prev"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:text="@string/prev_Button"
+        android:textColor="#FFFFFF"/>
 
     <Button
         android:id="@+id/Next"
@@ -41,20 +41,20 @@
         android:text="@string/pic_title"
         android:textColor="#FFFFFF"
         android:gravity="center"
-         />
+        />
 
 
 
-<fragment
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/image_fragment"
-    tools:layout="@layout/image_fragment"
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:layout_below="@id/Prev"
-    android:scaleType="centerCrop"
-    class= "com.aliza.imageviewer.ImageFragment"/>
+    <fragment
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/image_fragment"
+        tools:layout="@layout/image_fragment"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/Prev"
+        android:scaleType="fitCenter"
+        class= "com.aliza.imageviewer.ImageFragment"/>
 
 </RelativeLayout>
 
