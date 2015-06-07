@@ -1,0 +1,22 @@
+<resources>
+    <string name="app_name">UISample</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="first_name">Aliza  </string>
+    <string name="last_name">Levinger</string>
+    <string name="CS608">CS 608</string>
+    <string name="CS610">CS 610</string>
+    <string name="CS623">CS 623</string>
+    <string name="CS639">CS 639</string>
+    <string name="CS624">CS 624</string>
+
+
+    //<string-array name="courses">
+        //<item>CS 608</item>
+       // <item>CS 610</item>
+       // <item>CS 623</item>
+       // <item>CS 639</item>
+        //<item>CS 624</item>
+  //  </string-array>
+
+</resources>
