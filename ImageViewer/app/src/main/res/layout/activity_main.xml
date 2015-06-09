@@ -51,7 +51,7 @@
     android:id="@+id/image_fragment"
     tools:layout="@layout/image_fragment"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"
+    android:layout_height="match_parent"
     android:layout_below="@id/Prev"
     android:scaleType="centerCrop"
     class= "com.aliza.imageviewer.ImageFragment"/>
