@@ -1,22 +1,24 @@
 package com.aliza.imageviewer;
 
-import android.app.FragmentManager;
-import android.app.FragmentTransaction;
-import android.os.Bundle;
 
+import android.os.Bundle;
+import android.support.v4.app.FragmentActivity;
+import android.support.v4.app.FragmentTransaction;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.view.View;
-import android.support.v4.app.FragmentActivity;
-
 import android.view.View.OnClickListener;
+
+
 
 
 public class MainActivity extends FragmentActivity implements OnClickListener{
 
 
+
     int image_index = 0;
     private static final int MAX_IMAGE_COUNT = 5;
+
 
     private Integer[] ImageIds = {
             R.drawable.brooklynbridge,
@@ -26,11 +28,16 @@ public class MainActivity extends FragmentActivity implements OnClickListener{
             R.drawable.statue_of_liberty
     };
 
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        FragmentManager fragmentManager = getFragmentManager();
-        FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
+        android.app.FragmentManager fragmentManager=getFragmentManager();
+        android.app.FragmentTransaction fragmentTransaction=fragmentManager.beginTransaction();
+        fragmentTransaction.commit();
+
+
         setContentView(R.layout.activity_main);
 
         Button prev_Button = (Button) findViewById(R.id.Prev);
@@ -53,7 +60,9 @@ public class MainActivity extends FragmentActivity implements OnClickListener{
 
     }
 
+
     public void onClick(View v) {
+
 
         switch (v.getId()) {
 
@@ -65,7 +74,10 @@ public class MainActivity extends FragmentActivity implements OnClickListener{
                     image_index = MAX_IMAGE_COUNT - 1;
                 }
 
+
                 showImage();
+
+
 
                 break;
 
@@ -76,6 +88,7 @@ public class MainActivity extends FragmentActivity implements OnClickListener{
                 if (image_index == MAX_IMAGE_COUNT) {
                     image_index = 0;
                 }
+
 
                 showImage();
 

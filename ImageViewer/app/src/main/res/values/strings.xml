@@ -1,7 +1,9 @@
 <resources>
     <string name="app_name">ImageViewer</string>
-    <string name="pic_title">Aliza Levinger</string>
+
     <string name="prev_Button">Prev</string>
     <string name="next_Button">Next</string>
+
+
 
 </resources>
