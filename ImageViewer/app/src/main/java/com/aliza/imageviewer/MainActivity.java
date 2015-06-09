@@ -2,47 +2,98 @@ package com.aliza.imageviewer;
 
 import android.app.FragmentManager;
 import android.app.FragmentTransaction;
-import android.content.res.Configuration;
-import android.support.v4.app.Fragment;
-
-import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
-import android.view.Menu;
-import android.view.MenuItem;
+
+import android.widget.Button;
+import android.widget.ImageView;
+import android.view.View;
+import android.support.v4.app.FragmentActivity;
+
+import android.view.View.OnClickListener;
 
 
-public class MainActivity extends android.app.Activity{
+public class MainActivity extends FragmentActivity implements OnClickListener{
+
+
+    int image_index = 0;
+    private static final int MAX_IMAGE_COUNT = 5;
+
+    private Integer[] ImageIds = {
+            R.drawable.brooklynbridge,
+            R.drawable.freedomtower,
+            R.drawable.grandcentralclock,
+            R.drawable.skyline,
+            R.drawable.statue_of_liberty
+    };
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        FragmentManager fragmentManager=getFragmentManager();
+        FragmentManager fragmentManager = getFragmentManager();
         FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
-            setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_main);
 
+        Button prev_Button = (Button) findViewById(R.id.Prev);
+        if (prev_Button != null)
+            prev_Button.setOnClickListener(this);
+        Button next_Button = (Button) findViewById(R.id.Next);
+        if (next_Button != null)
+            next_Button.setOnClickListener(this);
+
+        showImage();
 
     }
 
 
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.menu_main, menu);
-        return true;
+
+    private void showImage() {
+
+        ImageView imgView = (ImageView) findViewById(R.id.image_view);
+        imgView.setImageResource(ImageIds[image_index]);
+
     }
 
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-        // Handle action bar item clicks here. The action bar will
-        // automatically handle clicks on the Home/Up button, so long
-        // as you specify a parent activity in AndroidManifest.xml.
-        int id = item.getItemId();
+    public void onClick(View v) {
 
-        //noinspection SimplifiableIfStatement
-        if (id == R.id.action_settings) {
-            return true;
+        switch (v.getId()) {
+
+            case (R.id.Prev):
+
+                image_index--;
+
+                if (image_index == -1) {
+                    image_index = MAX_IMAGE_COUNT - 1;
+                }
+
+                showImage();
+
+                break;
+
+            case (R.id.Next):
+
+                image_index++;
+
+                if (image_index == MAX_IMAGE_COUNT) {
+                    image_index = 0;
+                }
+
+                showImage();
+
+                break;
+
         }
 
-        return super.onOptionsItemSelected(item);
-    }
-}
+    }}
+
+
+
+
+
+
+
+
+
+
+
+
+
