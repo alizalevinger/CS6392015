@@ -32,7 +32,7 @@ import android.widget.Button;
 
             getMenuInflater().inflate(R.menu.menu_main, menu);
             super.onCreateOptionsMenu(menu);
-           // return true;
+            return true;
         }
    // }
 
