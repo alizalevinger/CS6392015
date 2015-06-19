@@ -6,6 +6,7 @@ import android.net.Uri;
 import android.support.v4.app.FragmentActivity;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
@@ -13,7 +14,7 @@ import android.view.View;
 import android.widget.Button;
 
 
-    public class MainActivity extends FragmentActivity{
+    public class MainActivity extends AppCompatActivity{
 
 
 
@@ -49,8 +50,11 @@ import android.widget.Button;
         //noinspection SimplifiableIfStatement
         if (id == R.id.action_settings) {
             return true;
+        } else if (id==R.id.action_help){
+            Intent helpIntent = new Intent(this, HelpActivity.class);
+            startActivity(helpIntent);
+            return true;
         }
-
         return super.onOptionsItemSelected(item);
     }
 
@@ -64,10 +68,7 @@ import android.widget.Button;
     Button newActivity;
 
     public void sendSMS(View view){
-        sms=(Button)findViewById(R.id.sms_button);
-        sms.setOnClickListener(new View.OnClickListener(){
-            @Override
-         public void onClick(View view){
+
                 Intent intent = new Intent((Intent.ACTION_VIEW));
 
                 intent.setData(Uri.parse("smsto: " + Uri.encode("6312581026")));
@@ -76,56 +77,38 @@ import android.widget.Button;
                 intent.setType("vnd.android-dir/mms-sms");
                 startActivity(intent);
             }
-        });
-            }
+
 
     public void makeCall(View view){
-        phone=(Button)findViewById(R.id.call_button);
-        phone.setOnClickListener(new View.OnClickListener(){
-            @Override
-            public void onClick(View view){
 
                 Intent callIntent = new Intent(Intent.ACTION_DIAL);
                 String phoneNumber = "tel:2589693567";
                 callIntent.setData(Uri.parse(phoneNumber));
                 startActivity(callIntent);
             }
-        });
-    }
+
 
     public void goWeb(View view){
-        web=(Button)findViewById(R.id.web_button);
-        web.setOnClickListener(new View.OnClickListener(){
-            @Override
-            public void onClick(View view){
 
                 Intent webIntent = new Intent(Intent.ACTION_VIEW);
                 String webPage = "http://stackoverflow.com";
                 webIntent.setData(Uri.parse(webPage));
                 startActivity(webIntent);
             }
-        });
-    }
+
 
     public void openMap(View view){
-        map=(Button)findViewById(R.id.map_button);
-        map.setOnClickListener(new View.OnClickListener(){
-            @Override
-            public void onClick(View view){
+
 
                 Intent mapIntent = new Intent(Intent.ACTION_VIEW);
                 String location = "10002";
                 mapIntent.setData(Uri.parse("geo:0,0?q="+ location ));
                 startActivity(mapIntent);
             }
-        });
-    }
+
 
     public void share(View view){
-        share=(Button)findViewById(R.id.share_button);
-        share.setOnClickListener(new View.OnClickListener(){
-            @Override
-            public void onClick(View view){
+
 
                 Intent shareIntent = new Intent(Intent.ACTION_SEND);
                 shareIntent.setType("plain/text");
@@ -133,25 +116,13 @@ import android.widget.Button;
                 Intent chooser = Intent.createChooser(shareIntent, chooserTitle);
                 startActivity(chooser);
             }
-        });
-    }
+
 
     public void launchNewActivity(View view){
-        newActivity=(Button)findViewById(R.id.new_activity_button);
-        newActivity.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
 
                 Intent newActivityIntent = new Intent(MainActivity.this, NewActivity.class);
                 startActivity(newActivityIntent);
 
             }
-        });
-    }
-
-
-
-
-
-
+       
 }

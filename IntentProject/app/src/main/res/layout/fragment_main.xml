@@ -1,10 +1,11 @@
-<RelativeLayout
+<LinearLayout
     android:name="button_frag"
     android:id="@+id/button_frag"
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
@@ -23,7 +24,7 @@
         android:id="@+id/call_button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@id/sms_button"
+
         android:text="@string/call_button_text"
         android:onClick="makeCall"/>
 
@@ -31,7 +32,7 @@
     android:id="@+id/web_button"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
-    android:layout_below="@id/call_button"
+
     android:text="@string/web_button_text"
     android:onClick="goWeb"/>
 
@@ -39,7 +40,7 @@
         android:id="@+id/map_button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@id/web_button"
+
         android:text="@string/map_button_text"
         android:onClick="openMap"/>
 
@@ -47,7 +48,7 @@
         android:id="@+id/share_button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@id/map_button"
+
         android:text="@string/share_button_text"
         android:onClick="share"/>
 
@@ -55,7 +56,7 @@
         android:id="@+id/new_activity_button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@id/share_button"
+
         android:text="@string/new_activity_button_text"
         android:onClick="launchNewActivity"/>
 
@@ -63,4 +64,4 @@
 
 
 
-</RelativeLayout>
+</LinearLayout>
