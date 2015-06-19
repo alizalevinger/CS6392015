@@ -12,4 +12,5 @@
     <string name="title_activity_new">NewActivity</string>
     <string name="hello_text">Hello Aliza Levinger</string>
     <string name="new_activity_button_text">NEW ACTIVITY</string>
+    <string name="action_help">Help</string>
 </resources>
